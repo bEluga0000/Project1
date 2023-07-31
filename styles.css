@@ -1,0 +1,158 @@
+
+:root
+{
+    --primary--color:#ffff;
+    --secondry--color:#222831;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--secondry--color);
+}
+
+html
+{
+    font-size: 10px;
+}
+
+p
+{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: var(--primary--color);
+    text-align: center;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.in-btn-contents
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+input
+{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 3rem 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+.btns
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn
+{
+    padding: 1rem 1rem;
+    width: 30%;
+    border: 1px solid slategrey;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn:hover
+{
+    background-color: yellowgreen;
+}
+
+.modal
+{
+    display: none ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+    background: transparent ;
+    z-index: 1;
+}
+.modal-content
+{
+    width: 80%;
+    max-width: 50rem;
+    background: whitesmoke;
+    position: relative;
+    margin: 5% auto;
+    padding: 1rem 0;
+    border-radius: 5px;
+    animation: slide-in ease .8s;
+    text-align: center;
+   
+}
+
+@keyframes slide-in {
+    0%
+    {
+        transform: translateY(-30rem);
+    }
+    100%
+    {
+           transform: translateY(0rem); 
+    }
+}
+
+.slide-up
+{
+    animation: slide-up ease .8s;
+}
+@keyframes slide-up {
+     0%
+    {
+        transform: translateY(0rem);
+    }
+    100%
+    {
+           transform: translateY(-50rem); 
+    }
+}
+
+.modal-content p{
+    color: black;
+    padding-top: 2rem; 
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+
+.close
+{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;   
+    cursor: pointer;
+}
+.close:hover
+{
+       font-weight: 600; 
+       color: firebrick;
+}
+
+
